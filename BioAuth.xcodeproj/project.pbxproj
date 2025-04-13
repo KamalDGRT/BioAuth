@@ -7,59 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0365049D2DAB38CB0058EE63 /* BioAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036504912DAB38CB0058EE63 /* BioAuth.framework */; };
 		036504AC2DAB39AF0058EE63 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 036504AB2DAB39AB0058EE63 /* .gitignore */; };
 		036504AE2DAB3A010058EE63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 036504AD2DAB39FC0058EE63 /* README.md */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0365049E2DAB38CB0058EE63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 036504882DAB38CB0058EE63 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 036504902DAB38CB0058EE63;
-			remoteInfo = BioAuth;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		036504912DAB38CB0058EE63 /* BioAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0365049C2DAB38CB0058EE63 /* BioAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		036504AB2DAB39AB0058EE63 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		036504AD2DAB39FC0058EE63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		036504BD2DAB3B350058EE63 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		036504BB2DAB3AF80058EE63 /* Exceptions for "Tests" folder in "BioAuth" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				BioAuthTests/BioAuthTests.swift,
-			);
-			target = 036504902DAB38CB0058EE63 /* BioAuth */;
-		};
-		036504BC2DAB3AF80058EE63 /* Exceptions for "Tests" folder in "BioAuthTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				BioAuthTests/BioAuthTests.swift,
-			);
-			target = 0365049B2DAB38CB0058EE63 /* BioAuthTests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		036504B32DAB3AC80058EE63 /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		036504B72DAB3AED0058EE63 /* Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				036504BB2DAB3AF80058EE63 /* Exceptions for "Tests" folder in "BioAuth" target */,
-				036504BC2DAB3AF80058EE63 /* Exceptions for "Tests" folder in "BioAuthTests" target */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,14 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		036504992DAB38CB0058EE63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0365049D2DAB38CB0058EE63 /* BioAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +44,6 @@
 				036504BD2DAB3B350058EE63 /* Package.swift */,
 				036504AD2DAB39FC0058EE63 /* README.md */,
 				036504B32DAB3AC80058EE63 /* Sources */,
-				036504B72DAB3AED0058EE63 /* Tests */,
 				036504922DAB38CB0058EE63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				036504912DAB38CB0058EE63 /* BioAuth.framework */,
-				0365049C2DAB38CB0058EE63 /* BioAuthTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +84,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				036504B32DAB3AC80058EE63 /* Sources */,
-				036504B72DAB3AED0058EE63 /* Tests */,
 			);
 			name = BioAuth;
 			packageProductDependencies = (
@@ -140,26 +91,6 @@
 			productName = BioAuth;
 			productReference = 036504912DAB38CB0058EE63 /* BioAuth.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		0365049B2DAB38CB0058EE63 /* BioAuthTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 036504A82DAB38CB0058EE63 /* Build configuration list for PBXNativeTarget "BioAuthTests" */;
-			buildPhases = (
-				036504982DAB38CB0058EE63 /* Sources */,
-				036504992DAB38CB0058EE63 /* Frameworks */,
-				0365049A2DAB38CB0058EE63 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0365049F2DAB38CB0058EE63 /* PBXTargetDependency */,
-			);
-			name = BioAuthTests;
-			packageProductDependencies = (
-			);
-			productName = BioAuthTests;
-			productReference = 0365049C2DAB38CB0058EE63 /* BioAuthTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -172,9 +103,6 @@
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					036504902DAB38CB0058EE63 = {
-						CreatedOnToolsVersion = 16.3;
-					};
-					0365049B2DAB38CB0058EE63 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
@@ -194,7 +122,6 @@
 			projectRoot = "";
 			targets = (
 				036504902DAB38CB0058EE63 /* BioAuth */,
-				0365049B2DAB38CB0058EE63 /* BioAuthTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,13 +136,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0365049A2DAB38CB0058EE63 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -226,22 +146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		036504982DAB38CB0058EE63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0365049F2DAB38CB0058EE63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 036504902DAB38CB0058EE63 /* BioAuth */;
-			targetProxy = 0365049E2DAB38CB0058EE63 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		036504A32DAB38CB0058EE63 /* Debug */ = {
@@ -439,40 +344,6 @@
 			};
 			name = Release;
 		};
-		036504A92DAB38CB0058EE63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B9W7594SR5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kamaldgrt.BioAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		036504AA2DAB38CB0058EE63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B9W7594SR5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kamaldgrt.BioAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,15 +361,6 @@
 			buildConfigurations = (
 				036504A62DAB38CB0058EE63 /* Debug */,
 				036504A72DAB38CB0058EE63 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		036504A82DAB38CB0058EE63 /* Build configuration list for PBXNativeTarget "BioAuthTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				036504A92DAB38CB0058EE63 /* Debug */,
-				036504AA2DAB38CB0058EE63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

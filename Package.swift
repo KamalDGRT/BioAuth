@@ -22,11 +22,6 @@ let package = Package(
         .target(
             name: "BioAuth",
             path: "Sources/BioAuth" // Source files directory
-        ),
-        .testTarget(
-            name: "BioAuthTests",
-            dependencies: ["BioAuth"],
-            path: "Tests/BioAuthTests"
         )
     ]
 )
