@@ -100,8 +100,7 @@ private extension BiometricAuth {
     ///
     /// - Parameter type: The `LABiometryType` value to be converted.
     /// - Returns: A `BiometricType` value that corresponds to the provided `LABiometryType`.
-    ///            Returns `.none` if no biometric authentication is available,
-    ///            `.touchID` for Touch ID, `.faceID` for Face ID, `.opticID` for Optic ID, and `.unknown` for any unrecognized type.
+    ///
     func biometricType(for type: LABiometryType) -> BiometricType {
         switch type {
         case .none:
@@ -122,14 +121,6 @@ private extension BiometricAuth {
     /// - Parameter nsError: The `NSError` object representing the biometric authentication error.
     /// - Returns: A `BiometricError` enum value corresponding to the provided `NSError`.
     ///
-    /// The function maps specific `LAError` cases to their corresponding `BiometricError` cases:
-    /// - `.authenticationFailed`: The authentication failed due to invalid credentials.
-    /// - `.userCancel`: The user canceled the authentication process.
-    /// - `.userFallback`: The user opted to use a fallback authentication method.
-    /// - `.biometryNotAvailable`: Biometric authentication is not available on the device.
-    /// - `.biometryNotEnrolled`: No biometric data is enrolled on the device.
-    /// - `.biometryLockout`: Biometric authentication is locked due to too many failed attempts.
-    /// - `default`: Any other error is mapped to `.unknown`.
     func biometricError(from nsError: NSError) -> BiometricError {
         let error: BiometricError
         
@@ -146,6 +137,16 @@ private extension BiometricAuth {
             error = .biometryNotEnrolled
         case LAError.biometryLockout:
             error = .biometryLockout
+        case LAError.notInteractive:
+            error = .notInteractive
+        case LAError.systemCancel:
+            error = .systemCancel
+        case LAError.passcodeNotSet:
+            error = .passcodeNotSet
+        case LAError.appCancel:
+            error = .appCancel
+        case LAError.invalidContext:
+            error = .invalidContext
         default:
             error = .unknown
         }

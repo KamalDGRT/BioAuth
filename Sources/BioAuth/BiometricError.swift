@@ -10,28 +10,32 @@ import Foundation
 public enum BiometricError: LocalizedError {
     
     /// Error indicating that the authentication process failed.
-    /// - Description: "There was a problem verifying your identity."
     case authenticationFailed
     
     /// Error indicating that the user canceled the authentication process.
-    /// - Description: "You pressed cancel."
     case userCancel
     
     /// Error indicating that the user opted to use a fallback method (e.g., password).
-    /// - Description: "You pressed password."
     case userFallback
     
     /// Error indicating that biometric authentication is not available on the device.
-    /// - Description: "Face ID/Touch ID is not available."
     case biometryNotAvailable
     
     /// Error indicating that biometric authentication is not set up on the device.
-    /// - Description: "Face ID/Touch ID is not set up."
     case biometryNotEnrolled
     
     /// Error indicating that biometric authentication is locked due to multiple failed attempts.
-    /// - Description: "Face ID/Touch ID is locked."
     case biometryLockout
+    
+    case notInteractive
+    
+    case systemCancel
+    
+    case passcodeNotSet
+    
+    case appCancel
+    
+    case invalidContext
     
     /// Error indicating an unknown issue with biometric authentication.
     /// - Description: "Face ID/Touch ID may not be configured."
@@ -43,15 +47,25 @@ public enum BiometricError: LocalizedError {
         case .authenticationFailed:
             return "There was a problem verifying your identity."
         case .userCancel:
-            return "You pressed cancel."
+            return "The user tapped the cancel button in the authentication dialog."
         case .userFallback:
-            return "You pressed password."
+            return "The user tapped the fallback button in the authentication dialog, but no fallback is available for the authentication policy."
         case .biometryNotAvailable:
-            return "Face ID/Touch ID is not available."
+            return "Authentication could not start, because biometry is not available on the device."
         case .biometryNotEnrolled:
-            return "Face ID/Touch ID is not set up."
+            return "Authentication could not start, because biometry has no enrolled identities."
         case .biometryLockout:
-            return "Face ID/Touch ID is locked."
+            return "Authentication was not successful, because there were too many failed biometry attempts and biometry is now locked."
+        case .notInteractive:
+            return "Displaying the required authentication user interface is forbidden."
+        case .systemCancel:
+            return "The system canceled authentication."
+        case .passcodeNotSet:
+            return "Please goto the Settings & Turn On Passcode"
+        case .appCancel:
+            return "The app canceled authentication."
+        case .invalidContext:
+            return "Invalid Context"
         case .unknown:
             return "Face ID/Touch ID may not be configured"
         }
